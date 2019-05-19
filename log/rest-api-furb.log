@@ -1,0 +1,226 @@
+2019-05-18 14:24:54 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 15:31:52 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 15:32:49 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 15:33:49 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 15:51:15 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 15:56:37 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 15:57:29 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 15:59:35 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 15:59:43 DEBUG UsuarioHandler:20 - getAll()
+2019-05-18 16:00:26 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 16:00:38 DEBUG UsuarioHandler:26 - getById(1)
+2019-05-18 16:14:35 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 16:17:39 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 16:17:45 DEBUG UsuarioHandler:26 - getById(1)
+2019-05-18 16:18:32 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 16:31:24 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 16:32:15 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 16:46:48 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 16:46:55 DEBUG UsuarioHandler:32 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 16:47:44 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 16:48:00 DEBUG UsuarioHandler:32 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 16:48:46 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 16:48:50 DEBUG UsuarioHandler:32 - insert(c2c92375-dc3d-4914-b670-82f4429c34b8, vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 17:14:37 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 17:16:49 DEBUG UsuarioHandler:75 - deleteById(1)
+2019-05-18 17:19:04 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 17:19:08 DEBUG UsuarioHandler:75 - deleteById(1)
+2019-05-18 17:24:04 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 17:24:08 DEBUG UsuarioHandler:76 - deleteById(1)
+2019-05-18 17:26:56 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 17:26:58 DEBUG UsuarioHandler:76 - deleteById(1)
+2019-05-18 17:27:57 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 17:28:00 DEBUG UsuarioHandler:76 - deleteById(1)
+2019-05-18 17:28:00 DEBUG UsuarioHandler:81 - {"success":[{"text":["1 deleted!"]}]}
+2019-05-18 17:28:36 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 17:28:41 DEBUG UsuarioHandler:76 - deleteById(1)
+2019-05-18 17:28:41 DEBUG UsuarioHandler:81 - {"success":{"text":"1 deleted!"}}
+2019-05-18 17:35:54 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 17:36:11 DEBUG UsuarioHandler:75 - deleteById(1)
+2019-05-18 17:36:11 DEBUG UsuarioHandler:78 - {"success":{"text":"1 deleted!"}}
+2019-05-18 17:36:38 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 17:36:41 DEBUG UsuarioHandler:76 - deleteById(1)
+2019-05-18 17:36:41 DEBUG UsuarioHandler:79 - {"success":{"text":"1 deleted!"}}
+2019-05-18 17:37:37 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 17:37:39 DEBUG UsuarioHandler:75 - deleteById(1)
+2019-05-18 17:37:39 DEBUG UsuarioHandler:78 - {"success":{"text":"1 deleted!"}}
+2019-05-18 17:39:12 INFO  RestApiFurbApplication:16 - Aplicação iniciada
+2019-05-18 17:39:16 DEBUG UsuarioHandler:75 - deleteById(1)
+2019-05-18 17:39:16 DEBUG UsuarioHandler:78 - {"success": {"text": "1 deleted!"}}
+2019-05-18 18:43:58 DEBUG UsuarioHandler:50 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 18:44:07 DEBUG UsuarioHandler:63 - put(c2c92375-dc3d-4914-b670-82f4429c34b8, vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 18:44:18 DEBUG UsuarioHandler:75 - deleteById(c2c92375-dc3d-4914-b670-82f4429c34b8)
+2019-05-18 18:44:18 DEBUG UsuarioHandler:78 - {"success": {"text": "c2c92375-dc3d-4914-b670-82f4429c34b8 deleted!"}}
+2019-05-18 18:44:37 DEBUG UsuarioHandler:90 - deleteByEmail(vinicius.lds.br@gmail.com)
+2019-05-18 18:44:44 DEBUG UsuarioHandler:90 - deleteByEmail(vinicius.lds.br@gmail.com)
+2019-05-18 18:59:18 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 19:00:36 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 19:05:16 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 19:06:18 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 19:07:22 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 19:07:25 DEBUG ComandaHandler:21 - getAll()
+2019-05-18 19:09:04 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 19:11:12 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 19:11:15 DEBUG ComandaHandler:29 - getById(c2c92375-dc3d-4914-b670-82f4429c34b8)
+2019-05-18 20:14:45 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 20:14:59 DEBUG UsuarioHandler:29 - getAll()
+2019-05-18 20:14:59 DEBUG UsuarioController:15 - getAll()
+2019-05-18 20:17:25 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 20:18:04 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 20:18:19 DEBUG UsuarioHandler:53 - insert(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 20:18:19 DEBUG UsuarioController:22 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 20:23:34 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 20:23:38 DEBUG UsuarioHandler:53 - insert(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 20:23:38 DEBUG UsuarioController:27 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 20:23:54 DEBUG UsuarioHandler:29 - getAll()
+2019-05-18 20:23:54 DEBUG UsuarioController:19 - getAll()
+2019-05-18 20:34:42 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 20:37:15 DEBUG UsuarioHandler:79 - deleteById(d54f1559-d419-41ca-8389-d0a386fa75aa)
+2019-05-18 20:41:49 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 20:42:14 DEBUG UsuarioHandler:54 - insert(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 20:42:14 DEBUG UsuarioController:27 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 20:42:26 DEBUG UsuarioHandler:79 - deleteById(a1e2f5ae-4688-433c-9be7-779a6524c666)
+2019-05-18 20:45:09 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 20:45:53 DEBUG UsuarioHandler:79 - deleteById(a1e2f5ae-4688-433c-9be7-779a6524c666)
+2019-05-18 20:47:35 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 20:47:51 DEBUG UsuarioHandler:54 - insert(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 20:47:51 DEBUG UsuarioController:27 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 20:48:02 DEBUG UsuarioHandler:79 - deleteById(5b62fad3-1b45-4352-ba30-ddde13fdfbb5)
+2019-05-18 20:48:14 DEBUG UsuarioHandler:54 - insert(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 20:48:14 DEBUG UsuarioController:27 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 20:48:53 DEBUG UsuarioHandler:54 - insert(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='chsponciano@gmail.com', senha='3i4m0r0l4'})
+2019-05-18 20:48:53 DEBUG UsuarioController:27 - insert(chsponciano@gmail.com, 3i4m0r0l4)
+2019-05-18 20:48:57 DEBUG UsuarioHandler:30 - getAll()
+2019-05-18 20:48:57 DEBUG UsuarioController:19 - getAll()
+2019-05-18 20:49:02 DEBUG UsuarioHandler:42 - getById(2cfad7a3-a731-4334-86a0-84d709f51b93)
+2019-05-18 20:49:11 DEBUG UsuarioHandler:42 - getById(2cfad7a3-a731-4334-86a0-84d709f51b93)
+2019-05-18 20:52:47 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 20:52:52 DEBUG UsuarioHandler:29 - getAll()
+2019-05-18 20:52:52 DEBUG UsuarioController:21 - getAll()
+2019-05-18 20:53:01 DEBUG UsuarioHandler:53 - insert(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='chsponciano@gmail.com', senha='3i4m0r0l4'})
+2019-05-18 20:53:01 DEBUG UsuarioController:29 - insert(chsponciano@gmail.com, 3i4m0r0l4)
+2019-05-18 20:53:05 DEBUG UsuarioHandler:29 - getAll()
+2019-05-18 20:53:05 DEBUG UsuarioController:21 - getAll()
+2019-05-18 20:53:17 DEBUG UsuarioHandler:78 - deleteById(11b98bf0-3dcb-4f43-aaaa-fef8e26887a9)
+2019-05-18 23:22:50 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 23:23:35 DEBUG UsuarioHandler:52 - insert(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 23:23:35 DEBUG UsuarioController:28 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 23:23:40 DEBUG UsuarioHandler:52 - insert(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 23:23:40 DEBUG UsuarioController:28 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 23:23:41 DEBUG UsuarioHandler:52 - insert(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 23:23:41 DEBUG UsuarioController:28 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 23:23:41 DEBUG UsuarioHandler:52 - insert(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 23:23:41 DEBUG UsuarioController:28 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 23:23:47 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:23:47 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:24:18 DEBUG UsuarioHandler:89 - deleteByEmail(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 23:24:18 DEBUG UsuarioController:56 - deleteByEmail(vinicius.lds.br@gmail.com)
+2019-05-18 23:24:27 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:24:27 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:24:43 DEBUG UsuarioHandler:89 - deleteByEmail(UsuarioDTO{id=c2c92375-dc3d-4914-b670-82f4429c34b8, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 23:24:43 DEBUG UsuarioController:56 - deleteByEmail(vinicius.lds.br@gmail.com)
+2019-05-18 23:52:29 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-18 23:52:45 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:52:45 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:53:09 DEBUG UsuarioHandler:52 - insert(UsuarioDTO{id=null, email='vinicius.lds.br@gmail.com', senha='s3nh4'})
+2019-05-18 23:53:09 DEBUG UsuarioController:28 - insert(vinicius.lds.br@gmail.com, s3nh4)
+2019-05-18 23:53:09 INFO  UsuarioController:33 - br.com.furb.restapifurb.model.usuario.Usuario@37ffe7e8 cadastrado!
+2019-05-18 23:53:14 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:53:14 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:53:26 DEBUG UsuarioHandler:40 - getById(2cfad7a3-a731-4334-86a0-84d709f51b93)
+2019-05-18 23:53:26 DEBUG UsuarioController:81 - getById(2cfad7a3-a731-4334-86a0-84d709f51b93)
+2019-05-18 23:53:30 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:53:30 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:53:34 DEBUG UsuarioHandler:40 - getById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:53:34 DEBUG UsuarioController:81 - getById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:53:38 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:53:38 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:53:56 DEBUG UsuarioHandler:40 - getById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:53:56 DEBUG UsuarioController:81 - getById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:54:04 DEBUG UsuarioHandler:65 - put(7c276ffe-a5a7-41d1-94dd-c8d334908fa4, UsuarioDTO{id=null, email='vinicius.lds.br@gmail.com', senha='senha'})
+2019-05-18 23:54:04 DEBUG UsuarioController:47 - put(7c276ffe-a5a7-41d1-94dd-c8d334908fa4, vinicius.lds.br@gmail.com, senha)
+2019-05-18 23:54:04 INFO  UsuarioController:54 - br.com.furb.restapifurb.model.usuario.Usuario@76ae197b teve seus dados alterados!
+2019-05-18 23:54:11 DEBUG UsuarioHandler:40 - getById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:54:11 DEBUG UsuarioController:81 - getById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:54:15 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:54:15 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:54:27 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:54:27 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:54:32 DEBUG UsuarioHandler:40 - getById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:54:32 DEBUG UsuarioController:81 - getById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:54:38 DEBUG UsuarioHandler:77 - deleteById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:54:38 DEBUG UsuarioController:38 - deleteById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:54:38 INFO  UsuarioController:42 - 7c276ffe-a5a7-41d1-94dd-c8d334908fa4 excluido!
+2019-05-18 23:54:45 DEBUG UsuarioHandler:40 - getById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:54:45 DEBUG UsuarioController:81 - getById(7c276ffe-a5a7-41d1-94dd-c8d334908fa4)
+2019-05-18 23:54:54 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:54:54 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:54:58 DEBUG UsuarioHandler:52 - insert(UsuarioDTO{id=null, email='vinicius.lds.br@gmail.com', senha='senha'})
+2019-05-18 23:54:58 DEBUG UsuarioController:28 - insert(vinicius.lds.br@gmail.com, senha)
+2019-05-18 23:54:58 INFO  UsuarioController:33 - br.com.furb.restapifurb.model.usuario.Usuario@dd4a8dd cadastrado!
+2019-05-18 23:55:04 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:55:04 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:55:17 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:55:17 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:55:27 DEBUG UsuarioHandler:89 - deleteByEmail(UsuarioDTO{id=null, email='chsponciano@gmail.com', senha='null'})
+2019-05-18 23:55:27 DEBUG UsuarioController:59 - deleteByEmail(chsponciano@gmail.com)
+2019-05-18 23:55:27 INFO  UsuarioController:75 - 2cfad7a3-a731-4334-86a0-84d709f51b93 deletados com sucesso!
+2019-05-18 23:55:33 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:55:33 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:55:46 DEBUG UsuarioHandler:77 - deleteById(893c9b11-2a2e-4e97-a313-efc3743856c3)
+2019-05-18 23:55:46 DEBUG UsuarioController:38 - deleteById(893c9b11-2a2e-4e97-a313-efc3743856c3)
+2019-05-18 23:55:46 INFO  UsuarioController:42 - 893c9b11-2a2e-4e97-a313-efc3743856c3 excluido!
+2019-05-18 23:55:53 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:55:53 DEBUG UsuarioController:20 - getAll()
+2019-05-18 23:55:56 DEBUG UsuarioHandler:40 - getById(893c9b11-2a2e-4e97-a313-efc3743856c3)
+2019-05-18 23:55:56 DEBUG UsuarioController:81 - getById(893c9b11-2a2e-4e97-a313-efc3743856c3)
+2019-05-18 23:56:04 DEBUG UsuarioHandler:52 - insert(UsuarioDTO{id=null, email='vinicius.lds.br@gmail.com', senha='senha'})
+2019-05-18 23:56:04 DEBUG UsuarioController:28 - insert(vinicius.lds.br@gmail.com, senha)
+2019-05-18 23:56:04 INFO  UsuarioController:33 - br.com.furb.restapifurb.model.usuario.Usuario@49c1a826 cadastrado!
+2019-05-18 23:56:22 DEBUG UsuarioHandler:52 - insert(UsuarioDTO{id=null, email='chsponciano@gmail.com', senha='senha'})
+2019-05-18 23:56:22 DEBUG UsuarioController:28 - insert(chsponciano@gmail.com, senha)
+2019-05-18 23:56:22 INFO  UsuarioController:33 - br.com.furb.restapifurb.model.usuario.Usuario@5d7cba1a cadastrado!
+2019-05-18 23:56:27 DEBUG UsuarioHandler:28 - getAll()
+2019-05-18 23:56:27 DEBUG UsuarioController:20 - getAll()
+2019-05-19 17:54:32 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-19 17:56:07 DEBUG UsuarioHandler:28 - getAll()
+2019-05-19 17:56:07 DEBUG UsuarioController:20 - getAll()
+2019-05-19 17:57:26 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=null, produtos='null', valorTotal=0})
+2019-05-19 17:57:26 DEBUG ComandaController:31 - insert(null, null, 0)
+2019-05-19 17:58:58 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=null, produtos='null', valorTotal=0})
+2019-05-19 17:58:58 DEBUG ComandaController:31 - insert(null, null, 0)
+2019-05-19 17:59:07 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=null, produtos='null', valorTotal=0})
+2019-05-19 17:59:07 DEBUG ComandaController:31 - insert(null, null, 0)
+2019-05-19 17:59:51 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-19 17:59:56 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=null, produtos='null', valorTotal=0})
+2019-05-19 17:59:56 DEBUG ComandaController:31 - insert(null, null, 0)
+2019-05-19 18:00:59 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=null, produtos='null', valorTotal=0})
+2019-05-19 18:00:59 DEBUG ComandaController:31 - insert(null, null, 0)
+2019-05-19 18:01:21 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=null, produtos='null', valorTotal=0})
+2019-05-19 18:01:21 DEBUG ComandaController:31 - insert(null, null, 0)
+2019-05-19 18:01:22 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=null, produtos='null', valorTotal=0})
+2019-05-19 18:01:22 DEBUG ComandaController:31 - insert(null, null, 0)
+2019-05-19 18:01:22 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=null, produtos='null', valorTotal=0})
+2019-05-19 18:01:22 DEBUG ComandaController:31 - insert(null, null, 0)
+2019-05-19 18:01:23 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=null, produtos='null', valorTotal=0})
+2019-05-19 18:01:23 DEBUG ComandaController:31 - insert(null, null, 0)
+2019-05-19 18:04:50 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-19 18:05:20 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-19 18:05:25 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=f7b40cbc-b130-4510-b80f-951287746079, produtos='x-bacon', valorTotal=10})
+2019-05-19 18:05:25 DEBUG ComandaController:31 - insert(f7b40cbc-b130-4510-b80f-951287746079, x-bacon, 10)
+2019-05-19 18:05:25 INFO  ComandaController:38 - br.com.furb.restapifurb.model.comanda.Comanda@366bf9b1 cadastrado!
+2019-05-19 18:05:46 DEBUG UsuarioHandler:28 - getAll()
+2019-05-19 18:05:46 DEBUG UsuarioController:20 - getAll()
+2019-05-19 18:06:11 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=0fa6f748-78f6-4132-a02d-54d19d35425c, produtos='x-picanha', valorTotal=15})
+2019-05-19 18:06:11 DEBUG ComandaController:31 - insert(0fa6f748-78f6-4132-a02d-54d19d35425c, x-picanha, 15)
+2019-05-19 18:06:11 INFO  ComandaController:38 - br.com.furb.restapifurb.model.comanda.Comanda@795ec051 cadastrado!
+2019-05-19 18:06:15 DEBUG ComandaHandler:28 - getAll()
+2019-05-19 18:06:15 DEBUG ComandaController:23 - getAll()
+2019-05-19 18:07:22 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-05-19 18:07:31 DEBUG ComandaHandler:28 - getAll()
+2019-05-19 18:07:31 DEBUG ComandaController:23 - getAll()
+2019-05-19 18:07:43 DEBUG ComandaHandler:40 - getById(606170c6-8ee6-4216-8b64-d282d4004be3)
+2019-05-19 18:07:43 DEBUG ComandaController:66 - getById(606170c6-8ee6-4216-8b64-d282d4004be3)
+2019-05-19 18:07:58 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=0fa6f748-78f6-4132-a02d-54d19d35425c, produtos='x-rola', valorTotal=24})
+2019-05-19 18:07:58 DEBUG ComandaController:31 - insert(0fa6f748-78f6-4132-a02d-54d19d35425c, x-rola, 24)
+2019-05-19 18:10:13 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
