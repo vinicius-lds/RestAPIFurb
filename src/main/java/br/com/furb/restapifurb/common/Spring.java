@@ -1,4 +1,4 @@
-package br.com.furb.restapifurb;
+package br.com.furb.restapifurb.common;
 
 import org.springframework.context.ConfigurableApplicationContext;
 
@@ -9,12 +9,9 @@ public class Spring {
     private Spring() {
     }
 
-    /**
-     * Tem que achar a impl oficial dessa merda
-     */
     public static <T> T bean(Class<T> bean) {
         if (context == null)
-            return null;
+            throw new IllegalStateException("No application context found!");
         return context.getBean(bean);
     }
 

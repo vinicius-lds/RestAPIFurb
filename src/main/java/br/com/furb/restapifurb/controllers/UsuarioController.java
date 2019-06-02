@@ -1,88 +1,93 @@
 package br.com.furb.restapifurb.controllers;
 
-import br.com.furb.restapifurb.Spring;
-import br.com.furb.restapifurb.handlers.common.response.DeleteResponse;
+import br.com.furb.restapifurb.common.Spring;
 import br.com.furb.restapifurb.model.usuario.Usuario;
-import br.com.furb.restapifurb.repositories.UsuarioRepository;
+import br.com.furb.restapifurb.model.usuario.UsuarioDTO;
+import br.com.furb.restapifurb.services.UsuarioService;
+import lombok.extern.log4j.Log4j;
 import org.apache.log4j.Logger;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.*;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.stream.Collectors;
+import java.util.List;
+import java.util.UUID;
 
-@Controller
+@Log4j
+@RestController
+@RequestMapping(path = "/usuarios")
 public class UsuarioController {
 
     private static final Logger LOGGER = Logger.getLogger(UsuarioController.class);
 
+    /**
+     * Busca todos os usuarios cadastrados
+     *
+     * @return todos os usuarios cadastrados
+     */
+    @GetMapping
     public List<Usuario> getAll() {
         LOGGER.debug("getAll()");
-        var usuarios = new ArrayList<Usuario>();
-        Optional.ofNullable(Spring.bean(UsuarioRepository.class).findAll())
-                .ifPresent(result -> result.forEach(usuarios::add));
-        return usuarios;
+        return Spring.bean(UsuarioService.class).getAll();
     }
 
-    public Usuario insert(String email, String senha) {
-        LOGGER.debug("insert(" + email + ", " + senha + ")");
-        var usuario = new Usuario();
-        usuario.setEmail(email);
-        usuario.setSenha(senha);
-        Spring.bean(UsuarioRepository.class).save(usuario);
-        LOGGER.info(usuario + " cadastrado!");
-        return usuario;
-    }
-
-    public String deleteById(UUID id) {
-        LOGGER.debug("deleteById(" + id + ")");
-        Spring.bean(UsuarioRepository.class).deleteById(id);
-        var out = new DeleteResponse();
-        out.setText(id + " foi excluido com sucesso!");
-        LOGGER.info(id + " excluido!");
-        return out.toString();
-    }
-
-    public Usuario put(UUID id, String email, String senha) {
-        LOGGER.debug("put(" + id + ", " + email + ", " + senha + ")");
-        AtomicReference<Usuario> newUsuario = new AtomicReference<>(null);
-        Spring.bean(UsuarioRepository.class).findById(id).ifPresent(usuario -> {
-            usuario.setEmail(email);
-            usuario.setSenha(senha);
-            newUsuario.set(Spring.bean(UsuarioRepository.class).save(usuario));
-        });
-        LOGGER.info(newUsuario + " teve seus dados alterados!");
-        return newUsuario.get();
-    }
-
-    public String deleteByEmail(String email) {
-        LOGGER.debug("deleteByEmail(" + email + ")");
-        var ids = new AtomicReference<List<UUID>>(Collections.emptyList());
-        Spring.bean(UsuarioRepository.class)
-                .findAllByEmail(email)
-                .ifPresent(usuarios ->
-                        ids.set(usuarios.stream().map(Usuario::getId).collect(Collectors.toList()))
-                );
-        var out = new DeleteResponse();
-        if (ids.get().isEmpty()) {
-            out.setText("Email '" + email + "' não foi encontrado!");
-        } else {
-            ids.get().forEach(Spring.bean(UsuarioRepository.class)::deleteById);
-            var joiner = new StringJoiner(", ");
-            ids.get().forEach(id -> joiner.add(id.toString()));
-            var logResponse = joiner.toString() + " deletados com sucesso!";
-            out.setText(logResponse);
-            LOGGER.info(logResponse);
-        }
-        return out.toString();
-    }
-
-    public Usuario getById(UUID id) {
+    /**
+     * Retorna um usuario com base no id
+     *
+     * @param id id do usuario
+     * @return usuario encontrado
+     */
+    @GetMapping(value = "/{id}")
+    public Usuario getById(@PathVariable UUID id) {
         LOGGER.debug("getById(" + id + ")");
-        var usuario = Spring.bean(UsuarioRepository.class).findById(id);
-        if (usuario.isPresent())
-            return usuario.get();
-        else
-            return null;
+        return Spring.bean(UsuarioService.class).getById(id);
     }
+
+    /**
+     * Cria um novo usuario
+     *
+     * @param usuarioDTO espera e usa somente os atributos email e senha
+     * @return usuario criado
+     */
+    @PostMapping
+    public Usuario insert(@RequestBody UsuarioDTO usuarioDTO) {
+        LOGGER.debug("insert(" + usuarioDTO + ")");
+        return Spring.bean(UsuarioService.class).insert(usuarioDTO.getEmail(), usuarioDTO.getSenha());
+    }
+
+    /**
+     * Altera os dados de um usuario
+     *
+     * @param id         id do usuario
+     * @param usuarioDTO espera e usa somente os atributos email e senha
+     * @return usuario alterado
+     */
+    @PutMapping(value = "/{id}")
+    public Usuario put(@PathVariable UUID id, @RequestBody UsuarioDTO usuarioDTO) {
+        LOGGER.debug("put(" + id + ", " + usuarioDTO + ")");
+        return Spring.bean(UsuarioService.class).put(id, usuarioDTO.getEmail(), usuarioDTO.getSenha());
+    }
+
+    /**
+     * Exclui um usuario
+     *
+     * @param id id do usuario
+     * @return texto com resposta da operação
+     */
+    @DeleteMapping(value = "/{id}")
+    public String deleteById(@PathVariable UUID id) {
+        LOGGER.debug("deleteById(" + id + ")");
+        return Spring.bean(UsuarioService.class).deleteById(id);
+    }
+
+    /**
+     * Exclui um usuario com base no email passado
+     *
+     * @param usuarioDTO espera e usa somente o atributo email
+     * @return texto com resposta da operação
+     */
+    @DeleteMapping
+    public String deleteByEmail(@RequestBody UsuarioDTO usuarioDTO) {
+        LOGGER.debug("deleteByEmail(" + usuarioDTO + ")");
+        return Spring.bean(UsuarioService.class).deleteByEmail(usuarioDTO.getEmail());
+    }
+
 }

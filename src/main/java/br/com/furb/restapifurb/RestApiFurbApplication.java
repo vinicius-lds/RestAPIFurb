@@ -1,5 +1,6 @@
 package br.com.furb.restapifurb;
 
+import br.com.furb.restapifurb.common.Spring;
 import lombok.extern.log4j.Log4j;
 import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;
