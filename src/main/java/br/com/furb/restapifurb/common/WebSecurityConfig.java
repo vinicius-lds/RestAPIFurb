@@ -1,7 +1,9 @@
 package br.com.furb.restapifurb.common;
 
 import br.com.furb.restapifurb.repositories.UsuarioRepository;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -35,6 +37,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
+                // Un-secure H2 Database
+                .antMatchers("/h2-console/**/**").permitAll()
                 // Allow's for any user to request a authentication token
                 .antMatchers("/auth/**", "/usuarios").permitAll()
                 // Requires that any request's should have been authenticated
@@ -43,9 +47,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity
                 .addFilterBefore(new FilterAux(), UsernamePasswordAuthenticationFilter.class);
 
-        httpSecurity.headers().cacheControl();
+        httpSecurity
+                .headers()
+                .frameOptions().sameOrigin()  // required to set for H2 else H2 Console will be blank.
+                .cacheControl();
     }
 
+
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
 
     private class FilterAux extends GenericFilterBean {
 
