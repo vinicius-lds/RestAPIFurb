@@ -2,7 +2,7 @@ package br.com.furb.restapifurb.controllers;
 
 import br.com.furb.restapifurb.common.JwtTokenUtil;
 import br.com.furb.restapifurb.common.Spring;
-import br.com.furb.restapifurb.common.security.JwtAuthenticationRequestDTO;
+import br.com.furb.restapifurb.common.WebSecurityConfig;
 import br.com.furb.restapifurb.model.usuario.UsuarioDTO;
 import br.com.furb.restapifurb.repositories.UsuarioRepository;
 import lombok.extern.log4j.Log4j;
@@ -14,6 +14,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -37,9 +38,10 @@ public class AuthenticationController {
     @Qualifier("jwtUserDetailsService")
     private UserDetailsService userDetailsService;
 
-    @PostMapping
-    public ResponseEntity<?> createAuthorizationToken(@RequestBody UsuarioDTO usuarioDTO) {
-        var authentication = Spring.bean(AuthenticationManager.class)
+    @PostMapping(path = "/login")
+    public ResponseEntity<?> createAuthorizationToken(@RequestBody UsuarioDTO usuarioDTO) throws Exception {
+        Authentication authentication = Spring.bean(WebSecurityConfig.class)
+                .authenticationManagerBean()
                 .authenticate(
                         new UsernamePasswordAuthenticationToken(
                                 usuarioDTO.getEmail(),
@@ -63,18 +65,18 @@ public class AuthenticationController {
 
     }
 
-    @RequestMapping(value = "/auth", method = RequestMethod.POST)
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtAuthenticationRequestDTO authenticationRequest) {
-
-        authenticate(authenticationRequest.getEmail(), authenticationRequest.getSenha());
-
-        // Reload password post-security so we can generate the token
-        final UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationRequest.getEmail());
-        final String token = jwtTokenUtil.generateToken((UsuarioDTO) userDetails);
-
-        // Return the token
-        return ResponseEntity.ok(token);
-    }
+//    @RequestMapping(value = "/auth", method = RequestMethod.POST)
+//    public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtAuthenticationRequestDTO authenticationRequest) {
+//
+//        authenticate(authenticationRequest.getEmail(), authenticationRequest.getSenha());
+//
+//        // Reload password post-security so we can generate the token
+//        final UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationRequest.getEmail());
+//        final String token = jwtTokenUtil.generateToken((UsuarioDTO) userDetails);
+//
+//        // Return the token
+//        return ResponseEntity.ok(token);
+//    }
 
     @RequestMapping(value = "/auth/refesh", method = RequestMethod.GET)
     public ResponseEntity<?> refreshAndGetAuthenticationToken(HttpServletRequest request) {
