@@ -1,4 +1,4 @@
-package br.com.furb.restapifurb.handlers.common.response;
+package br.com.furb.restapifurb.controllers.response;
 
 import org.json.JSONObject;
 

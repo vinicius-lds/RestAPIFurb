@@ -1,74 +1,81 @@
 package br.com.furb.restapifurb.controllers;
 
 import br.com.furb.restapifurb.Spring;
-import br.com.furb.restapifurb.handlers.common.response.DeleteResponse;
 import br.com.furb.restapifurb.model.comanda.Comanda;
-import br.com.furb.restapifurb.repositories.ComandaRepository;
-import br.com.furb.restapifurb.repositories.UsuarioRepository;
+import br.com.furb.restapifurb.model.comanda.ComandaDTO;
+import br.com.furb.restapifurb.services.ComandaService;
+import lombok.extern.log4j.Log4j;
 import org.apache.log4j.Logger;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
-import java.util.concurrent.atomic.AtomicReference;
 
-@Controller
+@Log4j
+@RestController
+@RequestMapping(path = "/comandas")
 public class ComandaController {
 
     private static final Logger LOGGER = Logger.getLogger(ComandaController.class);
 
+    /**
+     * Busca todos as comandas cadastradas
+     *
+     * @return todos as comandas cadastradas
+     */
+    @GetMapping
     public List<Comanda> getAll() {
         LOGGER.debug("getAll()");
-        var comandas = new ArrayList<Comanda>();
-        Optional.ofNullable(Spring.bean(ComandaRepository.class).findAll())
-                .ifPresent(result -> result.forEach(comandas::add));
-        return comandas;
+        return Spring.bean(ComandaService.class).getAll();
     }
 
-    public Comanda insert(UUID idUsuario, String produtos, int valorTotal) {
-        LOGGER.debug("insert(" + idUsuario + ", " + produtos + ", " + valorTotal + ")");
-        var comanda = new Comanda();
-        var usuario = Spring.bean(UsuarioRepository.class).findById(idUsuario).get();
-        comanda.setUsuario(usuario);
-        comanda.setProdutos(produtos);
-        comanda.setValorTotal(valorTotal);
-        Spring.bean(ComandaRepository.class).save(comanda);
-        LOGGER.info(comanda + " cadastrado!");
-        return comanda;
-    }
-
-    public String deleteById(UUID id) {
-        LOGGER.debug("deleteById(" + id + ")");
-        Spring.bean(ComandaRepository.class).deleteById(id);
-        var out = new DeleteResponse();
-        out.setText(id + " foi excluido com sucesso!");
-        LOGGER.info(id + " excluido!");
-        return out.toString();
-    }
-
-    public Comanda put(UUID id, UUID idUsuario, String produtos, int valorTotal) {
-        LOGGER.debug("put(" + id + ", " + idUsuario + ", " + produtos + ", " + valorTotal + ")");
-        AtomicReference<Comanda> newComanda = new AtomicReference<>(null);
-        Spring.bean(ComandaRepository.class).findById(id).ifPresent(comanda -> {
-            var usuario = Spring.bean(UsuarioRepository.class).findById(idUsuario).get();
-            comanda.setUsuario(usuario);
-            comanda.setProdutos(produtos);
-            comanda.setValorTotal(valorTotal);
-            newComanda.set(Spring.bean(ComandaRepository.class).save(comanda));
-        });
-        LOGGER.info(newComanda + " teve seus dados alterados!");
-        return newComanda.get();
-    }
-
-    public Comanda getById(UUID id) {
+    /**
+     * Retorna uma comanda com base no id
+     *
+     * @param id id da comanda
+     * @return comanda encontrada
+     */
+    @GetMapping(path = "/{id}")
+    public Comanda getById(@PathVariable UUID id) {
         LOGGER.debug("getById(" + id + ")");
-        var comanda = Spring.bean(ComandaRepository.class).findById(id);
-        if (comanda.isPresent())
-            return comanda.get();
-        else
-            return null;
+        return Spring.bean(ComandaService.class).getById(id);
+    }
+
+    /**
+     * Cria uma nova comanda
+     *
+     * @param comandaDTO espera e usa somente os atributos idusuario, produtos e valortotal
+     * @return comanda criada
+     */
+    @PostMapping
+    public Comanda insert(@RequestBody ComandaDTO comandaDTO) {
+        LOGGER.debug("intert(" + comandaDTO + ")");
+        return Spring.bean(ComandaService.class).insert(comandaDTO.getIdUsuario(), comandaDTO.getProdutos(), comandaDTO.getValorTotal());
+    }
+
+    /**
+     * Altera os dados de uma comanda
+     *
+     * @param id         id da comanda
+     * @param comandaDTO espera e usa somente os atributos idusuario, produtos e valortotal
+     * @return comanda alterada
+     */
+    @PutMapping(path = "/{id}")
+    public Comanda put(@PathVariable UUID id, @RequestBody ComandaDTO comandaDTO) {
+        LOGGER.debug("put(" + id + ", " + comandaDTO + ")");
+        return Spring.bean(ComandaService.class).put(id, comandaDTO.getIdUsuario(), comandaDTO.getProdutos(), comandaDTO.getValorTotal());
+    }
+
+    /**
+     * Exclui uma comanda
+     *
+     * @param id id da comanda
+     * @return texto com resposta da operação
+     */
+    @DeleteMapping(path = "/{id}")
+    public String deleteById(@PathVariable UUID id) {
+        LOGGER.debug("deleteById(" + id + ")");
+        return Spring.bean(ComandaService.class).deleteById(id);
     }
 
 }

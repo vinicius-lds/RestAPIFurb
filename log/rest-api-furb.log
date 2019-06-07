@@ -224,3 +224,7 @@
 2019-05-19 18:07:58 DEBUG ComandaHandler:52 - intert(ComandaDTO{id=null, idUsuario=0fa6f748-78f6-4132-a02d-54d19d35425c, produtos='x-rola', valorTotal=24})
 2019-05-19 18:07:58 DEBUG ComandaController:31 - insert(0fa6f748-78f6-4132-a02d-54d19d35425c, x-rola, 24)
 2019-05-19 18:10:13 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 22:33:19 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 22:34:08 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 22:34:19 DEBUG UsuarioController:28 - getAll()
+2019-06-06 22:34:19 DEBUG UsuarioService:20 - getAll()
