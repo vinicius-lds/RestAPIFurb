@@ -4,8 +4,11 @@ import br.com.furb.restapifurb.Spring;
 import br.com.furb.restapifurb.model.usuario.Usuario;
 import br.com.furb.restapifurb.model.usuario.UsuarioDTO;
 import br.com.furb.restapifurb.services.UsuarioService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.log4j.Log4j;
 import org.apache.log4j.Logger;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +17,7 @@ import java.util.UUID;
 @Log4j
 @RestController
 @RequestMapping(path = "/usuarios")
+@Api(value = "Api de usuarios", produces = MediaType.APPLICATION_JSON_VALUE)
 public class UsuarioController {
 
     private static final Logger LOGGER = Logger.getLogger(UsuarioController.class);
@@ -24,6 +28,7 @@ public class UsuarioController {
      * @return todos os usuarios cadastrados
      */
     @GetMapping
+    @ApiOperation("Busca todos os usuarios cadastrados")
     public List<Usuario> getAll() {
         LOGGER.debug("getAll()");
         return Spring.bean(UsuarioService.class).getAll();

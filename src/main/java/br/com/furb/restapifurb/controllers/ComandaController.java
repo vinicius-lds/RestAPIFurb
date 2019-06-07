@@ -4,8 +4,10 @@ import br.com.furb.restapifurb.Spring;
 import br.com.furb.restapifurb.model.comanda.Comanda;
 import br.com.furb.restapifurb.model.comanda.ComandaDTO;
 import br.com.furb.restapifurb.services.ComandaService;
+import io.swagger.annotations.Api;
 import lombok.extern.log4j.Log4j;
 import org.apache.log4j.Logger;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.UUID;
 @Log4j
 @RestController
 @RequestMapping(path = "/comandas")
+@Api(value = "Api de comandas", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ComandaController {
 
     private static final Logger LOGGER = Logger.getLogger(ComandaController.class);

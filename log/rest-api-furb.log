@@ -228,3 +228,15 @@
 2019-06-06 22:34:08 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
 2019-06-06 22:34:19 DEBUG UsuarioController:28 - getAll()
 2019-06-06 22:34:19 DEBUG UsuarioService:20 - getAll()
+2019-06-06 22:47:42 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 22:54:28 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 22:56:30 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 23:00:16 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 23:03:28 DEBUG UsuarioController:28 - getAll()
+2019-06-06 23:03:28 DEBUG UsuarioService:20 - getAll()
+2019-06-06 23:40:01 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 23:41:56 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 23:43:46 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 23:45:32 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 23:46:33 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
+2019-06-06 23:47:11 INFO  RestApiFurbApplication:16 - Aplicação iniciada!
