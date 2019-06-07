@@ -14,10 +14,10 @@ public class ComandaDTO {
     }
 
     public ComandaDTO(UUID id, UUID idUsuario, String produtos, int valorTotal) {
-        this.id = id;
-        this.idUsuario = idUsuario;
-        this.produtos = produtos;
-        this.valorTotal = valorTotal;
+        this.setId(id);
+        this.setIdUsuario(idUsuario);
+        this.setProdutos(produtos);
+        this.setValorTotal(valorTotal);
     }
 
     public UUID getId() {
@@ -25,6 +25,9 @@ public class ComandaDTO {
     }
 
     public void setId(UUID id) {
+        if(idUsuario == null){
+            throw new IllegalArgumentException("ID inválido");
+        }
         this.id = id;
     }
 
@@ -33,6 +36,9 @@ public class ComandaDTO {
     }
 
     public void setIdUsuario(UUID idUsuario) {
+        if(idUsuario == null){
+            throw new IllegalArgumentException("ID Usuário inválido");
+        }
         this.idUsuario = idUsuario;
     }
 
@@ -41,6 +47,9 @@ public class ComandaDTO {
     }
 
     public void setProdutos(String produtos) {
+        if(produtos == null || produtos.isEmpty()){
+            throw new IllegalArgumentException("Produto inválido");
+        }
         this.produtos = produtos;
     }
 
@@ -49,6 +58,9 @@ public class ComandaDTO {
     }
 
     public void setValorTotal(int valorTotal) {
+        if(valorTotal < 0){
+            throw new IllegalArgumentException("Valor total inválido");
+        }
         this.valorTotal = valorTotal;
     }
 

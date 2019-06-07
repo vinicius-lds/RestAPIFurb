@@ -23,9 +23,9 @@ public class Comanda {
     }
 
     public Comanda(Usuario usuario, String produtos, int valorTotal) {
-        this.usuario = usuario;
-        this.produtos = produtos;
-        this.valorTotal = valorTotal;
+        this.setProdutos(produtos);
+        this.setUsuario(usuario);
+        this.setValorTotal(valorTotal);
     }
 
     public UUID getId() {
@@ -41,6 +41,9 @@ public class Comanda {
     }
 
     public void setUsuario(Usuario usuario) {
+        if(usuario == null){
+            throw new IllegalArgumentException("Usuário inválido");
+        }
         this.usuario = usuario;
     }
 
@@ -49,6 +52,9 @@ public class Comanda {
     }
 
     public void setProdutos(String produtos) {
+        if(produtos == null || produtos.isEmpty()){
+            throw new IllegalArgumentException("Produto inválido");
+        }
         this.produtos = produtos;
     }
 
@@ -57,6 +63,9 @@ public class Comanda {
     }
 
     public void setValorTotal(int valorTotal) {
+        if(valorTotal < 0){
+            throw new IllegalArgumentException("Valor total inválido");
+        }
         this.valorTotal = valorTotal;
     }
 }

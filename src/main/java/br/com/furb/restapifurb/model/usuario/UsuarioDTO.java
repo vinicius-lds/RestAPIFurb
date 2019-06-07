@@ -21,6 +21,9 @@ public class UsuarioDTO {
     }
 
     public void setEmail(String email) {
+        if(email == null || email.isEmpty()){
+            throw new IllegalArgumentException("E-mail inválido");
+        }
         this.email = email;
     }
 
@@ -29,6 +32,9 @@ public class UsuarioDTO {
     }
 
     public void setSenha(String senha) {
+        if(senha == null || senha.isEmpty()){
+            throw new IllegalArgumentException("Senha do e-mail inválida");
+        }
         this.senha = senha;
     }
 

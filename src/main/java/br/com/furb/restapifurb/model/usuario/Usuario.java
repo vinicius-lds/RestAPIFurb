@@ -22,8 +22,8 @@ public class Usuario {
     }
 
     public Usuario(String email, String senha) {
-        this.email = email;
-        this.senha = senha;
+        this.setEmail(email);
+        this.setSenha(senha);
     }
 
     public UUID getId() {
@@ -39,6 +39,9 @@ public class Usuario {
     }
 
     public void setEmail(String email) {
+        if(email == null || email.isEmpty()){
+            throw new IllegalArgumentException("E-mail inválido");
+        }
         this.email = email;
     }
 
@@ -47,6 +50,9 @@ public class Usuario {
     }
 
     public void setSenha(String senha) {
+        if(senha == null || senha.isEmpty()){
+            throw new IllegalArgumentException("Senha do e-mail inválida");
+        }
         this.senha = senha;
     }
 
